@@ -1,0 +1,28 @@
+Q 5;
+
+
+
+
+Say the given form of tables is form-A. 
+And new form is form-B.
+
+for Intern Preference Matrix:
+
+say position of Ei in form-A = Ei_old
+then for form-B, at each index i store the Ei_old of Ei. This way for query whether Ea is prefered over Eb, just go to 
+indices a and b and gets the value Ea_old and Eb-old. So, if Ea_old is lower than Eb-old then Ea is preferred over Eb.
+This makes the complexity of answering the query O(1).
+
+
+for Employer Preference Matrix:
+
+
+say position of Ii in form-A = Ii_old
+then for form-B, at each index i store the Ii_old of Ii. This way for query whether Ia is prefered over Ib, just go to 
+indices a and b and gets the value Ia_old and Ib-old. So, if Ia_old is lower than Ib-old then Ia is preferred over Ib.
+This makes the complexity of answering the query O(1).
+
+Space required:
+No additional space will be required. New structure can be implemented in the same space used by old structure which is 
+basically O(n*m) while n representing the interns and m representing the employers for table one and n = employers and 
+m = interns for second table.
